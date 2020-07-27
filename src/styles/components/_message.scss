@@ -1,0 +1,39 @@
+.message {
+  display: flex;
+  flex-direction: column;
+
+  &__own {
+    background: $green;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    min-width: 30%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    align-self: flex-end;
+  }
+
+  &__other {
+    background: $blue;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    min-width: 30%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__user {
+    color: $offblack;
+    font-weight: 600;
+    padding: 0.2rem 1rem;
+  }
+
+  &__text {
+    color: $white;
+    padding: 0 1rem 1rem 3rem;
+    overflow-wrap: break-word;
+  }
+}

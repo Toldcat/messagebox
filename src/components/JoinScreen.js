@@ -9,23 +9,22 @@ const JoinScreen = () => {
     <div className='join'>
       <div className='join__inner'>
         <h1 className='join__heading'>Messagebox</h1>
-        <div>
+        <div className='join__inputgroup'>
           <input
+            className='join__inputgroup--input'
             placeholder='Name'
-            className='join__input'
             type='text'
             onChange={(e) => setName(e.target.value)}
           ></input>
-        </div>
-        <div>
           <input
+            className='join__inputgroup--input'
             placeholder='Room'
-            className='join__input'
             type='text'
             onChange={(e) => setRoom(e.target.value)}
           ></input>
         </div>
         <Link
+          className='join__link'
           onClick={(e) => (!name || !room ? e.preventDefault() : null)}
           to={`/chat?name=${name}&room=${room}`}
         >

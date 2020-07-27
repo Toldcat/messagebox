@@ -60,17 +60,19 @@ const Chat = ({ location }) => {
   }
 
   return (
-    <div>
-      <div>
+    <div className='chat'>
+      <div className='chat__container'>
         <ChatHeader roomName={room} />
-        <UserList roomData={roomData} />
-        <div>
-          <MessageBox messages={messages} name={name} />
-          <Input
-            message={message}
-            setMessage={setMessage}
-            sendMessage={sendMessage}
-          />
+        <div className='chat__group--left'>
+          <UserList roomData={roomData} />
+          <div className='chat__group--right'>
+            <MessageBox messages={messages} name={name} />
+            <Input
+              message={message}
+              setMessage={setMessage}
+              sendMessage={sendMessage}
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -4,23 +4,24 @@ import React from 'react'
 const Message = ({ message, name }) => {
   let isSentByMe = false
 
-  if (message.user === name) {
+  if (message.user.toLowerCase() === name.toLowerCase()) {
     isSentByMe = true
   }
 
   return (
-    //differentiate between own messages and other people's messages for styling purposes
-    isSentByMe ? (
-      <div>
-        <p>{message.user}</p>
-        <p>{message.text}</p>
-      </div>
-    ) : (
-      <div>
-        <p>{message.user}</p>
-        <p>{message.text}</p>
-      </div>
-    )
+    <div className='message'>
+      {isSentByMe ? (
+        <div className='message__own'>
+          <p className='message__user'>{message.user}</p>
+          <p className='message__text'>{message.text}</p>
+        </div>
+      ) : (
+        <div className='message__other'>
+          <p className='message__user'>{message.user}</p>
+          <p className='message__text'>{message.text}</p>
+        </div>
+      )}
+    </div>
   )
 }
 

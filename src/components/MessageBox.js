@@ -4,11 +4,9 @@ import Message from './Message'
 
 const MessageBox = ({ messages, name }) => {
   return (
-    <ScrollToBottom>
+    <ScrollToBottom className='messagebox'>
       {messages.map((message, index) => (
-        <div key={index}>
-          <Message name={name} message={message} />
-        </div>
+        <Message name={name} message={message} key={index} />
       ))}
     </ScrollToBottom>
   )

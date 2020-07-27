@@ -1,0 +1,16 @@
+.users {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  border-right: 2px solid $offblack;
+
+  &__heading {
+    color: $white;
+    padding: 1rem 1.5rem;
+  }
+
+  &__user {
+    color: $lightgrey;
+    padding: 0.5rem 1.5rem;
+  }
+}

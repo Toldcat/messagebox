@@ -30,9 +30,6 @@ io.on('connect', (socket) => {
     //destructure what comes back from the helper function
     const { error, user } = addUser({ id: socket.id, name, room })
 
-    //error handling
-    if (error) return callback(error)
-
     //send user a welcome message from the backend
     socket.emit('message', {
       user: 'admin',
