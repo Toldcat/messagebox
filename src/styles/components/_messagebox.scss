@@ -5,3 +5,17 @@
   overflow: auto;
   height: 100%;
 }
+
+//NPM component div styling to change scroll bar
+.css-y1c0xs {
+  &::-webkit-scrollbar {
+    width: 12px;
+    background-color: $darkgrey2;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgba($offblack, 0.5);
+  }
+}

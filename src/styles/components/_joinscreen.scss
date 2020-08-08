@@ -15,6 +15,11 @@
     justify-content: center;
     align-items: center;
     border-radius: 1rem;
+
+    @media only screen and (max-width: $phone) {
+      padding: 2rem;
+      width: 30rem;
+    }
   }
 
   &__heading {
@@ -30,12 +35,19 @@
     align-items: center;
     width: 30rem;
 
+    @media only screen and (max-width: $phone) {
+      width: 26rem;
+    }
+
     &--input {
       width: 30rem;
       margin-top: 1rem;
       border-radius: 7px;
       border: 1px solid rgba($lightgrey, 0.8);
       padding: 1rem 0.5rem;
+      @media only screen and (max-width: $phone) {
+        width: 26rem;
+      }
 
       &:focus {
         outline: none;
@@ -57,5 +69,9 @@
     background-color: $blue;
     border-radius: 7px;
     text-align: center;
+
+    @media only screen and (max-width: $phone) {
+      width: 26rem;
+    }
   }
 }
